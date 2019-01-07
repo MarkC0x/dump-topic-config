@@ -56,7 +56,12 @@ public class DumpTopicConfig {
             System.out.print(String.format("%-15s", "-----"));
             System.out.println();
 
-            for (ConfigEntry configEntry : config.entries()) {
+            // Sort config.entries()
+            List<ConfigEntry> configList = new ArrayList(config.entries());
+            Collections.sort(configList,
+                    (objectOne, objectTwo) -> objectOne.name().compareTo(objectTwo.name()));
+
+            for (ConfigEntry configEntry : configList) {
                 System.out.print(String.format("%-50s", configEntry.name()));
                 System.out.print(String.format("%-30s", configEntry.value()));
                 System.out.print(String.format("%-15s", configEntry.isDefault()));
