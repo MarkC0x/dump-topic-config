@@ -7,3 +7,7 @@ Simple Kafka AdminClient program to dump out the entire list of configuration pa
 Hidden option to list all topics on a given cluster:
 
 `Usage: DumpTopicConfig <bootstrap-server:port> --list`
+
+
+*Example Output:*
+
