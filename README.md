@@ -11,3 +11,4 @@ Hidden option to list all topics on a given cluster:
 
 *Example Output:*
 
+![alt text](examples/DumpTopicConfigOutput.png)
